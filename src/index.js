@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
 import './index.css';
+import * as serviceWorker from './serviceWorker';
 import { Layout, Menu } from 'antd';
 import {
   MenuUnfoldOutlined,
@@ -10,6 +11,7 @@ import {
   VideoCameraOutlined,
   UploadOutlined
 } from '@ant-design/icons';
+import Navbar from './components/Header/header';
 
 const { Header, Sider, Content } = Layout;
 
@@ -50,6 +52,7 @@ class SiderDemo extends React.Component {
                 onClick: this.toggle
               }
             )}
+            <Navbar />
           </Header>
           <Content
             className="site-layout-background"
@@ -67,4 +70,6 @@ class SiderDemo extends React.Component {
   }
 }
 
-ReactDOM.render(<SiderDemo />, document.getElementById('container'));
+ReactDOM.render(<SiderDemo />, document.getElementById('root'));
+
+serviceWorker.unregister();

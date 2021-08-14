@@ -1,0 +1,13 @@
+.section-header {
+  padding: 2px;
+}
+.section-header .header-inner {
+  display: flex;
+  justify-content: space-evenly;
+}
+.section-header .header-inner .header-left {
+  width: 140px;
+}
+.section-header .header-inner .header-center {
+  flex: 1;
+}
